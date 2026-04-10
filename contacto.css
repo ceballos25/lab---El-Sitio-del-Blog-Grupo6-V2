@@ -3,113 +3,65 @@
     --amarillo: #F29F05;
     --gris: #f2f2f2;
 }
-body{
-    color: #000;
-}
 
-/* Forzar texto negro en el formulario */
-.section__contacto label,
-.section__contacto input,
-.section__contacto textarea {
-    color: #000;
-}
 
-.section__contacto input::placeholder,
-.section__contacto textarea::placeholder {
-    color: #000;
-}
-
-p{
-    color: #000;
-}
-
-.fa-paper-plane{
-    color: #000 !important;
-}
-
-.main__contacto{
-    margin-top: 150px !important;
-    color: #000;
-}
-
-/* Encabezado */
-.main__contacto {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.main__contacto h1 {
-    margin-bottom: 10px;
-}
-
-/* Info contacto */
-.info__contacto {
-    padding: 20px;
-    text-align: center;
-    color: #000;
-}
-
-.info__contacto p {
-    margin: 8px 0;
-}
-
-/* Formulario */
-.section__contacto {
-    background-color: var(--gris);
-    padding: 25px;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: 30px auto;
-}
-
-.section__contacto h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-input[type=text],
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--azul);
-    border-radius: 5px;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-}
-
-textarea {
-    height: 150px;
-}
-
-/* Botón */
-.input__submit {
-    display: flex;
-    justify-content: center;
-}
-
-input[type=submit] {
-    background-color: var(--amarillo);
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #d48804;
-}
-
+/* Íconos */
 i {
-    margin-right: 8px;
+    margin-right: 6px;
     color: var(--azul);
-}
-
-.links-nav i {
-    margin-right: 5px;
 }
 
 h1 i, h2 i, h3 i {
     color: var(--amarillo);
+}
+
+/* ===== ENCABEZADO ===== */
+.main__contacto {
+    margin-top: 120px; /* menos exagerado */
+}
+
+/* ===== INFO CONTACTO ===== */
+.info__contacto {
+    background-color: var(--gris);
+}
+
+/* ===== FORMULARIO ===== */
+.section__contacto {
+    background-color: var(--gris);
+}
+
+/* Inputs estilo personalizado SIN romper Bootstrap */
+.form-control {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 0.2rem rgba(3, 74, 166, 0.2);
+}
+
+/* Placeholder más suave (mejor UX) */
+.form-control::placeholder {
+    color: #6c757d;
+}
+
+/* Labels */
+.form-label {
+    font-weight: 500;
+}
+
+/* ===== BOTÓN ===== */
+.btn-primary {
+    background-color: var(--amarillo);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #d48804;
+}
+
+/* ===== TEXTOS ===== */
+p {
+    color: #495057; /* gris elegante tipo Bootstrap */
 }
