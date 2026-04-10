@@ -8,66 +8,43 @@
     --background: #ffffff;
 }
 
-/* Para que el footer quede abajo SIEMPRE */
+/* 1. Base para que el footer quede abajo SIEMPRE */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0; /* Reseteo de margen por si acaso */
 }
 
-/* Empuja el footer hacia abajo */
-footer {
-    margin-top: auto;
-}
-
-/* Estilo del footer */
-footer {
+/* 2. Contenedor principal del footer */
+.custom-footer {
     background-color: var(--negro);
     color: var(--background);
-    padding: 10px 20px;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    padding: 20px;
+    margin-bottom: 0; /* Evita que Bootstrap cree un espacio blanco abajo */
+    border-top: 4px solid var(--amarillo) !important; /* Toque de diseño en el borde superior */
 }
 
-/* Columnas */
-.footer-column {
-    max-width: 350px;
-}
-
-/* Títulos */
-.footer-column h3 {
+/* 3. Títulos de las columnas (Bootstrap usa h5 en tu estructura) */
+.custom-footer h5 {
     color: var(--amarillo);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
-/* Listas */
-.footer-column ul {
-    list-style: none;
-}
-
-.footer-column ul li {
-    margin-bottom: 8px;
-}
-
-/* Links */
-.footer-column a {
-    text-decoration: none;
+/* 4. Estilo de los enlaces (Sobrescribiendo .nav-link de Bootstrap) */
+.custom-footer .nav-link {
     color: var(--background);
+    transition: color 0.3s ease;
 }
 
-.footer-column a:hover {
+.custom-footer .nav-link:hover {
     color: var(--naranja);
 }
 
-.footer-bottom {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid var(--amarillo);
-    padding-top: 10px;
-    font-size: 13px;
+/* 5. Texto de copyright y logos */
+.custom-footer .copyright {
     color: var(--background);
+    font-size: 14px;
+    margin-top: 10px;
 }
