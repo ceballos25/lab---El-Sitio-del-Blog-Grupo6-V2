@@ -1,0 +1,73 @@
+:root {
+    --azul: #034AA6;
+    --amarillo: #F29F05;
+    --naranja: #F28A2E;
+    --rojo: #F21905;
+    --negro: #0D0D0D;
+    --navbar: #d1981c;
+    --background: #ffffff;
+}
+
+/* Para que el footer quede abajo SIEMPRE */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Empuja el footer hacia abajo */
+footer {
+    margin-top: auto;
+}
+
+/* Estilo del footer */
+footer {
+    background-color: var(--negro);
+    color: var(--background);
+    padding: 10px 20px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Columnas */
+.footer-column {
+    max-width: 350px;
+}
+
+/* Títulos */
+.footer-column h3 {
+    color: var(--amarillo);
+    margin-bottom: 10px;
+}
+
+/* Listas */
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+/* Links */
+.footer-column a {
+    text-decoration: none;
+    color: var(--background);
+}
+
+.footer-column a:hover {
+    color: var(--naranja);
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid var(--amarillo);
+    padding-top: 10px;
+    font-size: 13px;
+    color: var(--background);
+}
